@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region to create resources in"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-3"
 }
 
 variable "cluster_name" {
@@ -13,7 +13,7 @@ variable "cluster_name" {
 variable "kubernetes_version" {
   description = "Kubernetes control plane version"
   type        = string
-  default     = "1.27"
+  default     = "1.33"
 }
 
 variable "vpc_id" {
