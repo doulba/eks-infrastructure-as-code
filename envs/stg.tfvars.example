@@ -1,0 +1,15 @@
+cluster_name = "eks-stg"
+region = "eu-west-3"
+
+# En pré-production, fournir probablement des subnets explicites
+vpc_id = ""
+private_subnet_ids = ["<subnet-0123456789abcdef0>"]
+public_subnet_ids  = ["<subnet-0aaaabbbbccccdddd>"]
+
+# Node group sizing
+node_group_desired_capacity = 2
+node_group_min_capacity     = 1
+node_group_max_capacity     = 4
+
+create_ecr = true
+create_vpc_endpoints = true

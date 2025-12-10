@@ -1,0 +1,18 @@
+cluster_name = "eks-pprd"
+region = "eu-west-3"
+
+# En production, fournissez des IDs réels
+vpc_id = ""
+private_subnet_ids = ["<subnet-0123456789abcdef0>", "<subnet-0fedcba9876543210>"]
+public_subnet_ids  = ["<subnet-0aaaabbbbccccdddd>"]
+
+# Node group sizing
+node_group_desired_capacity = 3
+node_group_min_capacity     = 2
+node_group_max_capacity     = 6
+
+create_ecr = true
+create_vpc_endpoints = true
+
+# Option: fournir route tables pour S3 gateway endpoint
+# s3_route_table_ids = ["rtb-0123456789abcdef0"]
