@@ -93,3 +93,33 @@ variable "vpc_scan_file" {
   type        = string
   default     = ""
 }
+
+variable "spot_instance_types" {
+  description = "Instance types to use for Spot managed node group (cheap/spot-capable) - adjust according to availability in the target region"
+  type        = list(string)
+  default     = ["t3.small", "t3a.small"]
+}
+
+variable "create_ecr" {
+  description = "Whether to create an ECR repository for application images"
+  type        = bool
+  default     = true
+}
+
+variable "ecr_repository_name" {
+  description = "Name for the ECR repository (if empty a default name using cluster_name will be used)"
+  type        = string
+  default     = "tngs-eks-repo"
+}
+
+variable "create_vpc_endpoints" {
+  description = "Whether to create VPC endpoints for ECR/STS and S3"
+  type        = bool
+  default     = true
+}
+
+variable "s3_route_table_ids" {
+  description = "Optional list of route table ids to attach a Gateway endpoint for S3. If empty the module will try to read route table ids from vpc_scan_output JSON."
+  type        = list(string)
+  default     = []
+}
