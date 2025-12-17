@@ -10,7 +10,7 @@ ifndef ALLOWED_PUBLIC_IP
 endif
 
 render: check-ip
-	python render.py $(ENV)
+	python scripts/render.py $(ENV)
 
 
 plan: check-ip

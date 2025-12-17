@@ -65,6 +65,7 @@ make test-aws ENV=dev
 - PyYAML (`pip install pyyaml`)
 
 ## Scripts
+- `scripts/render.py`: Renders Terraform files from YAML and Jinja2 templates.
 - `scripts/test_tf_outputs.py`: Checks that all expected Terraform outputs are present.
 - `scripts/check_aws_resources.py`: Checks that all AWS resources exist using their Terraform output IDs.
 
